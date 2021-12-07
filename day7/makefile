@@ -1,5 +1,5 @@
-main: main.c
-	gcc main.c -g -o main
+main: main2.c
+	gcc main2.c -g -o main
 
 runs: 
 	./main < sample
