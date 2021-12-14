@@ -1,7 +1,7 @@
 from collections import Counter
 
 data = []
-with open("input", "r") as file:
+with open("sample", "r") as file:
     for line in file:
         if not line == '\n':
             data.append(line[:-1])
@@ -14,9 +14,11 @@ for d in data[1:]:
     dic[instructions[-1][0]] = instructions[-1][1]
      
 
-steps = 10
+steps = 3
 for step in range(steps):
+    print(step)
     index = 0
+    print(template)
     while index < len(template) - 1:
         cur = template[index : index + 2]
         if cur in dic:
