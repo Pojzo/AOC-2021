@@ -7,16 +7,16 @@ import sys
 X = 100
 Y = 100
 
-# X = 10
-# Y = 10
+X = 5
+Y = 5
 
 matrix = []
-with open("input", "r") as file:
+with open("mysample", "r") as file:
     for line in file:
         matrix.append(list(map(int, line[:-1])))
 
 def min_cost(matrix):
-    dist = np.zeros((X, Y))
+    dist = np.zeros((X + 1, Y + 1))
     sm = -matrix[0][0]
     for i in range(X):
         dist[i][0] = sm + matrix[i][0]
